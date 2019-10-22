@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>TypeHead</title>
+  <script type="text/javascript" src="typehead.js"></script>
+  <link rel="stylesheet" href="typehead.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <form autocomplete="off">
+    <table>
+      <tr>
+        <td>test1</td>
+        <td>
+          <div class="container-wrapper-1 container-wrapper" style="width:300px;">
+            <div class="container-1" >
+              <div class="tag-container bootstrap-tagsinput" id="tag-container-id-1">
+
+                <input id="myInput1" class="myInput" type="text" name="myCountry" placeholder="Tags" >
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>test2</td>
+        <td>
+          <div class="container-wrapper-2 container-wrapper" style="width:300px;">
+            <div class="container-1" >
+              <div class="tag-container bootstrap-tagsinput" id="tag-container-id-2">
+
+                <input id="myInput2" class="myInput" type="text" name="myCountry" placeholder="Tags" >
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <script type="text/javascript">
+    var function_tag = ['proc code', 'DCN', 'test1', 'test2', 'test3'];
+    var relation_tag = ['greater than equal to', 'greater than equal', 'less than equal to', 'less than equal',
+      'equal', 'not equal', 'in', 'and', 'or'
+    ];
+    var value_tag = ['3306', '9508', '1111', '1234'];
+    inp_classes = document.getElementsByClassName("myInput");
+    // for(var i=0;i<inp_classes.length;i++){
+    //   console.log(inp_classes.item(i));
+    //   autocomplete(inp_classes.item(i), function_tag, relation_tag, value_tag);
+    // };
+    // autocomplete(document.getElementById("myInput"), function_tag, relation_tag, value_tag);
+    autocomplete(document.getElementById("myInput1"), function_tag, relation_tag, value_tag,1);
+    autocomplete(document.getElementById("myInput2"), function_tag, relation_tag, value_tag,2);
+
+  </script>
+</body>
+
+</html>
